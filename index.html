@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codeway</title>
+<meta name="description" content="AI가 쓴 코드, 이제 한눈에 읽어요.">
+<meta http-equiv="refresh" content="3; url=https://pc1.tail23f008.ts.net/codeway/">
+<style>
+  :root { color-scheme: dark; --bg: #121418; --fg: #f1f2f4; --muted: #9aa1ab; --accent: #f5c84c; --on: #1a1406; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100dvh; display: grid; place-items: center; background: var(--bg); color: var(--fg);
+    font-family: "Pretendard", system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; padding: 24px; }
+  main { display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+  .mark { width: 56px; height: 56px; border-radius: 16px; background: var(--accent); display: grid; place-items: center; color: var(--on); font-weight: 800; font-size: 28px; }
+  h1 { margin: 0; font-size: 26px; }
+  p { margin: 0; color: var(--muted); }
+  a { display: inline-flex; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 16px; background: var(--accent); color: var(--on); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark" aria-hidden="true">C</div>
+  <h1>Codeway로 가는 중이에요</h1>
+  <p>자동으로 넘어가지 않으면 아래 버튼을 눌러 주세요.</p>
+  <a id="go" href="https://pc1.tail23f008.ts.net/codeway/">Codeway 열기</a>
+</main>
+<script>
+  // github.io/codeway/<경로> → Codeway/<경로> (주소 뒤 경로·검색어를 그대로)
+  var target = "https://pc1.tail23f008.ts.net/codeway";
+  var rest = location.pathname.replace(/^\/codeway\/?/, "/").replace(/\/index\.html$/, "/");
+  var url = target + (rest === "/" ? "/" : rest) + location.search + location.hash;
+  document.getElementById("go").href = url;
+  location.replace(url);
+</script>
+</body>
+</html>
